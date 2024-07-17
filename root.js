@@ -261,7 +261,7 @@ async function logInGmail(page, data) {
 
 async function colabCheckConnected(page, login) {
     if ((login && RELOAD) || login == false) {
-        await page.goto('https://colab.research.google.com/tun/m/assignments?authuser=0', { waitUntil: 'load', timeout: 0 })
+        await page.goto('https://colab.research.google.com/?authuser=0', { waitUntil: 'load', timeout: 0 })
         let list = await connectedList(page)
         if (list == null) {
             mLoginFailed = true
@@ -333,7 +333,7 @@ async function setUserAgent(page, details) {
 
     await page.setUserAgent(userAgent)
 
-    await page.emulate({"name":"Mi 9T Pro","userAgent":userAgent,"viewport":{"width":details['width'],"height":details['height'],"deviceScaleFactor":1,"isMobile":true,"hasTouch":true,"isLandscape":false}})
+    await page.emulate({"name":"Mi 13T Pro","userAgent":userAgent,"viewport":{"width":details['width'],"height":details['height'],"deviceScaleFactor":1,"isMobile":true,"hasTouch":true,"isLandscape":false}})
 
     await page.setViewport({
         width: details['width'],
@@ -405,7 +405,7 @@ async function waitForLoginSuccess(page, selection) {
                 status = 1
                 break
             } else if (pageUrl.startsWith('https://gds.google.com/web/chip')) {
-                await page.goto('https://colab.research.google.com/tun/m/assignments?authuser=0', { waitUntil: 'load', timeout: 0 })
+                await page.goto('https://colab.research.google.com/?authuser=0', { waitUntil: 'load', timeout: 0 })
                 status = 1
                 break
             } else if (pageUrl.startsWith('https://accounts.google.com/') && pageUrl.includes('challenge') && pageUrl.includes('pwd')) {
