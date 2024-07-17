@@ -22,7 +22,7 @@ let COLAB = [
 
 let BASE_URL = Buffer.from('BERKAS', 'base64').toString('ascii')
 
-let loginUrl = 'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fcolab.research.google.com%2Ftun%2Fm%2Fassignments%3Fauthuser%3D0&ec=GAZAqQM&ifkv=ASKXGp2VjIgsjrAwBFLiCjhx-F5QfSM4e9q_N7QDa_b3wN-IPMZNHK_ZiTRaBByb_7kyjZ7DePjB&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S687877650%3A1703041094123974&theme=glif'
+let loginUrl = 'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fcolab.research.google.com%2F&ec=GAZAqQM&ifkv=AdF4I74_37UoP0cxCf053-BFFEtenBT6XzXwfUJ40VHWGCIc0Pie2B0Dch5T47AKNkgLxqPzapeYUQ&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2079476639%3A1721230513538161&ddm=0'
 
 
 puppeteer.use(StealthPlugin())
