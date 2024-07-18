@@ -316,7 +316,7 @@ async function getPageDetails(page) {
 }
 
 async function setUserAgent(page, details) {
-    let userAgent = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.43 Mobile Safari/537.36'
+    let userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
     
     await page.evaluateOnNewDocument((userAgent) => {
         let open = window.open
@@ -715,16 +715,16 @@ async function getFatchID(page, url) {
                     'headers': {
                         'accept': '*/*',
                         'accept-language': 'en-US,en;q=0.9',
-                        'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+                        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
                         'sec-ch-ua-mobile': '?0',
                         'sec-ch-ua-platform': '"Windows"',
                         'sec-fetch-dest': 'empty',
-                        'sec-fetch-mode': 'cors',
+                        'sec-fetch-mode': 'same-origin',
                         'sec-fetch-site': 'same-origin',
                         'x-colab-tunnel': 'Google'
                     },
                     'referrer': 'https://colab.research.google.com/',
-                    'referrerPolicy': 'origin',
+                    'referrerPolicy': 'strict-origin-when-cross-origin',
                     'body': null,
                     'method': 'GET',
                     'mode': 'cors',
@@ -759,18 +759,18 @@ async function deleteFatchID(page, url) {
                     'headers': {
                         'accept': '*/*',
                         'accept-language': 'en-US,en;q=0.9',
-                        'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+                        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
                         'sec-ch-ua-mobile': '?0',
                         'sec-ch-ua-platform': '"Windows"',
                         'sec-fetch-dest': 'empty',
-                        'sec-fetch-mode': 'cors',
+                        'sec-fetch-mode': 'same-origin',
                         'sec-fetch-site': 'same-origin',
                         'x-colab-tunnel': 'Google'
                     },
                     'referrer': 'https://colab.research.google.com/',
-                    'referrerPolicy': 'origin',
+                    'referrerPolicy': 'strict-origin-when-cross-origin',
                     'body': null,
-                    'method': 'DELETE',
+                    'method': 'GET',
                     'mode': 'cors',
                     'credentials': 'include'
                 }).then((response) => {
@@ -796,16 +796,16 @@ async function unassingFatch(page, url) {
                     'headers': {
                         'accept': '*/*',
                         'accept-language': 'en-US,en;q=0.9',
-                        'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+                        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
                         'sec-ch-ua-mobile': '?0',
                         'sec-ch-ua-platform': '"Windows"',
                         'sec-fetch-dest': 'empty',
-                        'sec-fetch-mode': 'cors',
+                        'sec-fetch-mode': 'same-origin',
                         'sec-fetch-site': 'same-origin',
                         'x-colab-tunnel': 'Google'
                     },
                     'referrer': 'https://colab.research.google.com/',
-                    'referrerPolicy': 'origin',
+                    'referrerPolicy': 'strict-origin-when-cross-origin',
                     'body': null,
                     'method': 'GET',
                     'mode': 'cors',
@@ -828,11 +828,11 @@ async function unassingFatch(page, url) {
                                 'headers': {
                                     'accept': '*/*',
                                     'accept-language': 'en-US,en;q=0.9',
-                                    'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+                                    'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
                                     'sec-ch-ua-mobile': '?0',
                                     'sec-ch-ua-platform': '"Windows"',
                                     'sec-fetch-dest': 'empty',
-                                    'sec-fetch-mode': 'cors',
+                                    'sec-fetch-mode': 'same-origin',
                                     'sec-fetch-site': 'same-origin',
                                     'x-colab-tunnel': 'Google',
                                     'x-goog-colab-token': token
